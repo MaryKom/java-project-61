@@ -4,3 +4,4 @@ build:
 	./gradlew clean build
 lint:
 	./gradlew checkstyleMain
+.PHONY: build
