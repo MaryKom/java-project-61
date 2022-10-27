@@ -8,10 +8,9 @@ public class Prime {
         Random rand = new Random();
         int number;
         String answer = "";
-        System.out.println(isPrime(13));
         String[][] gameQuestionAnswer = new String [Engine.NUMBER_OF_ROUNDS][2];
         for (int i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
-            number = rand.nextInt(50);
+            number = rand.nextInt(1, 50);
             answer = isPrime(number);
             gameQuestionAnswer[i][Engine.NUMBER_OF_QUESTION] = Integer.toString(number);
             gameQuestionAnswer[i][Engine.NUMBER_OF_ANSWER] = answer;
