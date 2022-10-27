@@ -10,3 +10,5 @@ Game:
 Even - https://asciinema.org/a/KCPCDPFI2qGucKgPJ1EFrDLTy
 
 Calc - https://asciinema.org/a/VZEoAKJLTVKverUwNEl1e2Pom
+
+GCD - https://asciinema.org/a/snhsInBW3hOgEmJM7ECli9nRK
