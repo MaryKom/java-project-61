@@ -12,7 +12,7 @@ public class Progression {
         int missProgression;
         String question = "";
         int answer = 0;
-        String[][] gameQuestionAnswer = new String[Engine.NUMBER_OF_ROUNDS][2];
+        String[][] gameQuestionAnswer = new String[Engine.NUMBER_OF_ROUNDS][Engine.COUNT_OF_ANSWER];
         for (int i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
             question = "";
             numberProgression1 = rand.nextInt(10);

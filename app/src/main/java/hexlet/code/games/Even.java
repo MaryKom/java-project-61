@@ -9,7 +9,7 @@ public class Even {
         Random rand = new Random();
         int question;
         String answer;
-        String[][] gameQuestionAnswer = new String[Engine.NUMBER_OF_ROUNDS][2];
+        String[][] gameQuestionAnswer = new String[Engine.NUMBER_OF_ROUNDS][Engine.COUNT_OF_ANSWER];
         for (int i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
             question = rand.nextInt(1000);
             if (question % 2 == 0) {

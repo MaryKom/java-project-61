@@ -6,6 +6,7 @@ public class Engine {
     public static final int NUMBER_OF_ROUNDS = 3;
     public static final int NUMBER_OF_QUESTION = 0;
     public static final int NUMBER_OF_ANSWER = 1;
+    public static final int COUNT_OF_ANSWER = 2;
     private static Scanner sc = new Scanner(System.in);
 
     public static void runGame(String rules, String[][] gameQuestionAnswer) {
