@@ -9,12 +9,12 @@ public class Progression {
     private static final int D_PROGRESSION_MAX = 7;
     private static final int COUNT_PROGRESSION_MIN = 5;
     private static final int COUNT_PROGRESSION_MAX = 10;
+    private static int numberProgression1;
+    private static int dProgression;
+    private static int countProgression;
+    private static int missProgression;
     public static void runGame() {
         Random rand = new Random();
-        int numberProgression1;
-        int dProgression;
-        int countProgression;
-        int missProgression;
         String question = "";
         int answer = 0;
         String[][] gameQuestionAnswer = new String[Engine.NUMBER_OF_ROUNDS][Engine.COUNT_OF_ANSWER];
