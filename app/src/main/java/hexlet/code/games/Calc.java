@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class Calc {
-    public static final String rules = "What is the result of the expression?";
+    public static final String RULES = "What is the result of the expression?";
     public static final int MAX_NUMBER = 20;
     public static final int COUNT_OPERATION = 3;
     public static void runGame() {
@@ -38,6 +38,6 @@ public class Calc {
             gameQuestionAnswer[i][Engine.NUMBER_OF_QUESTION] = question;
             gameQuestionAnswer[i][Engine.NUMBER_OF_ANSWER] = Integer.toString(answer);
         }
-        Engine.runGame(rules, gameQuestionAnswer);
+        Engine.runGame(RULES, gameQuestionAnswer);
     }
 }

@@ -3,7 +3,7 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class Prime {
-    private static final String rules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    private static final String RULES = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     private static final int MIN_NUMBER = 1;
     private static final int MAX_NUMBER = 50;
     public static void runGame() {
@@ -17,7 +17,7 @@ public class Prime {
             gameQuestionAnswer[i][Engine.NUMBER_OF_QUESTION] = Integer.toString(number);
             gameQuestionAnswer[i][Engine.NUMBER_OF_ANSWER] = answer;
         }
-        Engine.runGame(rules, gameQuestionAnswer);
+        Engine.runGame(RULES, gameQuestionAnswer);
     }
 
     public static String isPrime(int number) {

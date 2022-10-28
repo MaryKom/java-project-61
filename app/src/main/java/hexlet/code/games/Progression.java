@@ -3,7 +3,7 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class Progression {
-    private static final String rules = "What number is missing in the progression?";
+    private static final String RULES = "What number is missing in the progression?";
     private static final int FIRST_NUMBER_PROGRESSION_MAX = 10;
     private static final int D_PROGRESSION_MIN = 1;
     private static final int D_PROGRESSION_MAX = 7;
@@ -35,6 +35,6 @@ public class Progression {
             gameQuestionAnswer[i][Engine.NUMBER_OF_QUESTION] = question;
             gameQuestionAnswer[i][Engine.NUMBER_OF_ANSWER] = Integer.toString(answer);
         }
-        Engine.runGame(rules, gameQuestionAnswer);
+        Engine.runGame(RULES, gameQuestionAnswer);
     }
 }
