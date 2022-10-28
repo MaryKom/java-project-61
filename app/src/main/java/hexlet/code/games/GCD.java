@@ -5,11 +5,11 @@ import java.util.Random;
 public class GCD {
     public static void runGame() {
         String rules = "Find the greatest common divisor of given numbers.";
-        Random rand = new Random();;
+        Random rand = new Random();
         int number1;
         int number2;
         String guestion = "";
-        String[][] gameQuestionAnswer = new String [Engine.NUMBER_OF_ROUNDS][2];
+        String[][] gameQuestionAnswer = new String[Engine.NUMBER_OF_ROUNDS][2];
         for (int i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
             number1 = rand.nextInt(100);
             number2 = rand.nextInt(100);

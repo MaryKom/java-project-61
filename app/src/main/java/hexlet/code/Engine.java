@@ -3,9 +3,9 @@ import java.util.Scanner;
 
 
 public class Engine {
-    public static int NUMBER_OF_ROUNDS = 3;
-    public static int NUMBER_OF_QUESTION = 0;
-    public static int NUMBER_OF_ANSWER = 1;
+    public static final int NUMBER_OF_ROUNDS = 3;
+    public static final int NUMBER_OF_QUESTION = 0;
+    public static final int NUMBER_OF_ANSWER = 1;
     private static Scanner sc = new Scanner(System.in);
 
     public static void runGame(String rules, String[][] gameQuestionAnswer) {
@@ -19,8 +19,8 @@ public class Engine {
             if (answer.equals(gameQuestionAnswer[i][NUMBER_OF_ANSWER])) {
                 System.out.println("Correct!");
             } else {
-                System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was '" + gameQuestionAnswer[i][NUMBER_OF_ANSWER]
-                        + "'.\nLet's try again, " + cli.getName() + "!");
+                System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was '"
+                        + gameQuestionAnswer[i][NUMBER_OF_ANSWER] + "'.\nLet's try again, " + cli.getName() + "!");
                 return;
             }
         }
