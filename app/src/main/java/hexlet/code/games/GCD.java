@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class GCD {
     private static final int MAX_NUMBER = 100;
-    private static String RULES = "Find the greatest common divisor of given numbers.";
+    private static final String RULES = "Find the greatest common divisor of given numbers.";
     public static void runGame() {
         Random rand = new Random();
         int number1;
@@ -17,12 +17,12 @@ public class GCD {
             number2 = rand.nextInt(MAX_NUMBER);
             guestion = Integer.toString(number1) + " " + Integer.toString(number2);
             gameQuestionAnswer[i][Engine.NUMBER_OF_QUESTION] = guestion;
-            gameQuestionAnswer[i][Engine.NUMBER_OF_ANSWER] = GCDEuclid(number1, number2);
+            gameQuestionAnswer[i][Engine.NUMBER_OF_ANSWER] = gcdEuclid(number1, number2);
         }
         Engine.runGame(RULES, gameQuestionAnswer);
     }
 
-    public static String GCDEuclid(int number1, int number2) {
+    public static String gcdEuclid(int number1, int number2) {
         while (number1 != number2) {
             if (number1 > number2) {
                 number1 = number1 - number2;
