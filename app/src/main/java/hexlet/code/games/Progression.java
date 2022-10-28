@@ -3,8 +3,13 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class Progression {
+    private static final String rules = "What number is missing in the progression?";
+    private static final int FIRST_NUMBER_PROGRESSION_MAX = 10;
+    private static final int D_PROGRESSION_MIN = 1;
+    private static final int D_PROGRESSION_MAX = 7;
+    private static final int COUNT_PROGRESSION_MIN = 5;
+    private static final int COUNT_PROGRESSION_MAX = 10;
     public static void runGame() {
-        String rules = "What number is missing in the progression?";
         Random rand = new Random();
         int numberProgression1;
         int dProgression;
@@ -15,9 +20,9 @@ public class Progression {
         String[][] gameQuestionAnswer = new String[Engine.NUMBER_OF_ROUNDS][Engine.COUNT_OF_ANSWER];
         for (int i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
             question = "";
-            numberProgression1 = rand.nextInt(10);
-            dProgression = rand.nextInt(1, 7);
-            countProgression = rand.nextInt(5, 10);
+            numberProgression1 = rand.nextInt(FIRST_NUMBER_PROGRESSION_MAX);
+            dProgression = rand.nextInt(D_PROGRESSION_MIN, D_PROGRESSION_MAX);
+            countProgression = rand.nextInt(COUNT_PROGRESSION_MIN, COUNT_PROGRESSION_MAX);
             missProgression = rand.nextInt(countProgression);
             for (int j = 0; j < countProgression; j++) {
                 if (j != missProgression) {

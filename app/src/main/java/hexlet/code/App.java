@@ -18,15 +18,15 @@ public class App {
                 + "0 - Exit\n"
                 + "Your choice: ");
         Scanner sc = new Scanner(System.in);
-        int game = sc.nextInt();
+        String game = sc.next();
         switch (game) {
-            case 1 -> Cli.greeting();
-            case 2 -> Even.runGame();
-            case 3 -> Calc.runGame();
-            case 4 -> GCD.runGame();
-            case 5 -> Progression.runGame();
-            case 6 -> Prime.runGame();
-            case 0 -> System.out.println("Exit!");
+            case "1" -> Cli.greeting();
+            case "2" -> Even.runGame();
+            case "3" -> Calc.runGame();
+            case "4" -> GCD.runGame();
+            case "5" -> Progression.runGame();
+            case "6" -> Prime.runGame();
+            case "0" -> System.out.println("Exit!");
             default -> System.out.println("Something went wrong!");
         }
     }
