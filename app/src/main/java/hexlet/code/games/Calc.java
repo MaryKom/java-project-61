@@ -4,15 +4,15 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class Calc {
-    public static final String RULES = "What is the result of the expression?";
-    public static final int MAX_NUMBER = 20;
-    public static final int COUNT_OPERATION = 3;
+    private static final String RULES = "What is the result of the expression?";
+    private static final int MAX_NUMBER = 20;
+    private static final int COUNT_OPERATION = 3;
+    private static int numberQuestion1;
+    private static int numberQuestion2;
+    private static int numberMathOperation;
+    private static String question = "";
     public static void runGame() {
         Random rand = new Random();
-        int numberQuestion1;
-        int numberQuestion2;
-        int numberMathOperation;
-        String question = "";
         int answer = 0;
         String strMathOperation = "";
         String[][] gameQuestionAnswer = new String[Engine.NUMBER_OF_ROUNDS][Engine.COUNT_OF_ANSWER];

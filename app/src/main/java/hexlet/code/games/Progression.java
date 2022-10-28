@@ -13,10 +13,10 @@ public class Progression {
     private static int dProgression;
     private static int countProgression;
     private static int missProgression;
+    private static String question = "";
+    private static int answer = 0;
     public static void runGame() {
         Random rand = new Random();
-        String question = "";
-        int answer = 0;
         String[][] gameQuestionAnswer = new String[Engine.NUMBER_OF_ROUNDS][Engine.COUNT_OF_ANSWER];
         for (int i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
             question = "";
