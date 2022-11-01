@@ -27,7 +27,7 @@ public class App {
             case "5" -> Progression.runGame();
             case "6" -> Prime.runGame();
             case "0" -> System.out.println("Exit!");
-            default -> System.out.println("Something went wrong!");
+            default -> System.out.println("Unknown command!");
         }
     }
 }

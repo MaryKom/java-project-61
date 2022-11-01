@@ -1,23 +1,16 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
-import java.util.Random;
+import hexlet.code.Utils;
 
 public class GCD {
     private static final int MAX_NUMBER = 100;
     private static final String RULES = "Find the greatest common divisor of given numbers.";
-    public static void runGame() {
-        Random rand = new Random();
-        int number1;
-        int number2;
 
-        String guestion = "";
-        String[][] gameQuestionAnswer = new String[Engine.NUMBER_OF_ROUNDS][Engine.COUNT_OF_ANSWER];
+    public static void runGame() {
+        int countOfAnswer = 2;
+        String[][] gameQuestionAnswer = new String[Engine.NUMBER_OF_ROUNDS][countOfAnswer];
         for (int i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
-            number1 = rand.nextInt(MAX_NUMBER);
-            number2 = rand.nextInt(MAX_NUMBER);
-            guestion = Integer.toString(number1) + " " + Integer.toString(number2);
-            gameQuestionAnswer[i][Engine.NUMBER_OF_QUESTION] = guestion;
-            gameQuestionAnswer[i][Engine.NUMBER_OF_ANSWER] = gcdEuclid(number1, number2);
+            gameQuestionAnswer[i] = roundQuestionAnswer();
         }
         Engine.runGame(RULES, gameQuestionAnswer);
     }
@@ -31,5 +24,14 @@ public class GCD {
             }
         }
         return Integer.toString(number1);
+    }
+
+    private static String[] roundQuestionAnswer() {
+        int number1 = Utils.getMaxRandom(MAX_NUMBER);
+        int number2 = Utils.getMaxRandom(MAX_NUMBER);
+        String[] roundQuestionAnswer = new String[2];
+        roundQuestionAnswer[0] = Integer.toString(number1) + " " + Integer.toString(number2);
+        roundQuestionAnswer[1] = gcdEuclid(number1, number2);
+        return roundQuestionAnswer;
     }
 }

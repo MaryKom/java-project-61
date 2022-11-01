@@ -4,27 +4,35 @@ import java.util.Scanner;
 
 public class Engine {
     public static final int NUMBER_OF_ROUNDS = 3;
-    public static final int NUMBER_OF_QUESTION = 0;
-    public static final int NUMBER_OF_ANSWER = 1;
-    public static final int COUNT_OF_ANSWER = 2;
     private static Scanner sc = new Scanner(System.in);
 
     public static void runGame(String rules, String[][] gameQuestionAnswer) {
-        Cli cli = new Cli();
-        cli.greeting();
+        int numberOfQuestion = 0;
+        int numberOfAnswer = 1;
+
+        System.out.println("Welcome to the Brain Games!");
+        System.out.print("May I have your name? ");
+        //Scanner sc = new Scanner(System.in);
+        String name = sc.next();
+        System.out.println("Hello, " + name + "!");
+
         System.out.println(rules);
+        String question = "";
+        String answerRight = "";
         for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
-            System.out.println("Question: " + gameQuestionAnswer[i][NUMBER_OF_QUESTION]);
+            question = gameQuestionAnswer[i][numberOfQuestion];
+            answerRight = gameQuestionAnswer[i][numberOfAnswer];
+            System.out.println("Question: " + question);
             System.out.print("Answer: ");
             String answer = sc.next();
-            if (answer.equals(gameQuestionAnswer[i][NUMBER_OF_ANSWER])) {
+            if (answer.equals(answerRight)) {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was '"
-                        + gameQuestionAnswer[i][NUMBER_OF_ANSWER] + "'.\nLet's try again, " + cli.getName() + "!");
+                        + answerRight + "'.\nLet's try again, " + name + "!");
                 return;
             }
         }
-        System.out.println("Congratulations, " + cli.getName() + "!");
+        System.out.println("Congratulations, " + name + "!");
     }
 }

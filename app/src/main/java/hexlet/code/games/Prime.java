@@ -1,21 +1,17 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
-import java.util.Random;
+import hexlet.code.Utils;
 
 public class Prime {
     private static final String RULES = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     private static final int MIN_NUMBER = 1;
     private static final int MAX_NUMBER = 50;
+
     public static void runGame() {
-        Random rand = new Random();
-        int number;
-        String answer = "";
-        String[][] gameQuestionAnswer = new String[Engine.NUMBER_OF_ROUNDS][Engine.COUNT_OF_ANSWER];
+        int countOfAnswer = 2;
+        String[][] gameQuestionAnswer = new String[Engine.NUMBER_OF_ROUNDS][countOfAnswer];
         for (int i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
-            number = rand.nextInt(MIN_NUMBER, MAX_NUMBER);
-            answer = isPrime(number);
-            gameQuestionAnswer[i][Engine.NUMBER_OF_QUESTION] = Integer.toString(number);
-            gameQuestionAnswer[i][Engine.NUMBER_OF_ANSWER] = answer;
+            gameQuestionAnswer[i] = roundQuestionAnswer();
         }
         Engine.runGame(RULES, gameQuestionAnswer);
     }
@@ -30,5 +26,13 @@ public class Prime {
             }
         }
         return "yes";
+    }
+
+    private static String[] roundQuestionAnswer() {
+        int number = Utils.getMinMaxRandom(MIN_NUMBER, MAX_NUMBER);
+        String[] roundQuestionAnswer = new String[2];
+        roundQuestionAnswer[0] = Integer.toString(number);
+        roundQuestionAnswer[1] = isPrime(number);
+        return roundQuestionAnswer;
     }
 }
