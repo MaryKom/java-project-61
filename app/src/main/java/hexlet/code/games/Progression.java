@@ -39,8 +39,7 @@ public class Progression {
         for (int i = 0; i < countProgression; i++) {
             if (i != missProgression) {
                 question += Integer.toString(progression[i]) + " ";
-            }
-            else {
+            } else {
                 question += ".. ";
                 roundQuestionAnswer[1] = Integer.toString(progression[i]);
             }
