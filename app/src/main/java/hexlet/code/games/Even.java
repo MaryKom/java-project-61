@@ -7,9 +7,7 @@ public class Even {
     private static final int MAX_NUMBER = 1000;
 
     public static void runGame() {
-        int question;
-        int countOfAnswer = 2;
-        String[][] gameQuestionAnswer = new String[Engine.NUMBER_OF_ROUNDS][countOfAnswer];
+        String[][] gameQuestionAnswer = new String[Engine.NUMBER_OF_ROUNDS][2];
         for (int i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
             gameQuestionAnswer[i] = roundQuestionAnswer();
         }

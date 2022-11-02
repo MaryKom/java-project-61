@@ -8,33 +8,27 @@ public class Calc {
     private static final char[] OPERATOR = new char[]{'+', '-', '*'};
 
     public static void runGame() {
-        int countOfAnswer = 2;
-        String[][] gameQuestionAnswer = new String[Engine.NUMBER_OF_ROUNDS][countOfAnswer];
+        String[][] gameQuestionAnswer = new String[Engine.NUMBER_OF_ROUNDS][2];
         for (int i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
-            gameQuestionAnswer[i] = roundQuestionAnswer();
+            gameQuestionAnswer[i] = generateRoundData();
         }
         Engine.runGame(RULES, gameQuestionAnswer);
     }
 
     private static int calculate(int numberFirst, int numberSecond, char mathOperations) {
-        int result = 0;
         switch (mathOperations) {
             case '+':
-                result = numberFirst + numberSecond;
-                break;
+                return numberFirst + numberSecond;
             case '-':
-                result = numberFirst - numberSecond;
-                break;
+                return numberFirst - numberSecond;
             case '*':
-                result = numberFirst * numberSecond;
-                break;
+                return numberFirst * numberSecond;
             default:
-                break;
+                throw new RuntimeException("No operator" + mathOperations);
         }
-        return result;
     }
 
-    private static String[] roundQuestionAnswer() {
+    private static String[] generateRoundData() {
         int number1 = Utils.getMaxRandom(MAX_NUMBER);
         int number2 = Utils.getMaxRandom(MAX_NUMBER);
         char mathOperator = OPERATOR[Utils.getMaxRandom(OPERATOR.length)];

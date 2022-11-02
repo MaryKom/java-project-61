@@ -11,8 +11,7 @@ public class Progression {
     private static final int COUNT_PROGRESSION_MAX = 10;
 
     public static void runGame() {
-        int countOfAnswer = 2;
-        String[][] gameQuestionAnswer = new String[Engine.NUMBER_OF_ROUNDS][countOfAnswer];
+        String[][] gameQuestionAnswer = new String[Engine.NUMBER_OF_ROUNDS][2];
         for (int i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
             gameQuestionAnswer[i] = roundQuestionAnswer();
         }

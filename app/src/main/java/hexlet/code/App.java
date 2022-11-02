@@ -20,7 +20,7 @@ public class App {
         Scanner sc = new Scanner(System.in);
         String game = sc.next();
         switch (game) {
-            case "1" -> Cli.greeting();
+            case "1" -> Cli.greet();
             case "2" -> Even.runGame();
             case "3" -> Calc.runGame();
             case "4" -> GCD.runGame();
