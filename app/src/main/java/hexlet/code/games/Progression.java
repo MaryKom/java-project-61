@@ -13,7 +13,7 @@ public class Progression {
     public static void runGame() {
         String[][] gameQuestionAnswer = new String[Engine.NUMBER_OF_ROUNDS][2];
         for (int i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
-            gameQuestionAnswer[i] = roundQuestionAnswer();
+            gameQuestionAnswer[i] = getRoundQuestionAnswer();
         }
         Engine.runGame(RULES, gameQuestionAnswer);
     }
@@ -27,7 +27,7 @@ public class Progression {
         return progression;
     }
 
-    private static String[] roundQuestionAnswer() {
+    private static String[] getRoundQuestionAnswer() {
         int numberProgression1 = Utils.getMaxRandom(FIRST_NUMBER_PROGRESSION_MAX);
         int dProgression = Utils.getMinMaxRandom(D_PROGRESSION_MIN, D_PROGRESSION_MAX);
         int countProgression = Utils.getMinMaxRandom(COUNT_PROGRESSION_MIN, COUNT_PROGRESSION_MAX);

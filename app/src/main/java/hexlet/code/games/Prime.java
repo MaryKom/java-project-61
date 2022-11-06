@@ -10,7 +10,7 @@ public class Prime {
     public static void runGame() {
         String[][] gameQuestionAnswer = new String[Engine.NUMBER_OF_ROUNDS][2];
         for (int i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
-            gameQuestionAnswer[i] = roundQuestionAnswer();
+            gameQuestionAnswer[i] = getRoundQuestionAnswer();
         }
         Engine.runGame(RULES, gameQuestionAnswer);
     }
@@ -27,7 +27,7 @@ public class Prime {
         return "yes";
     }
 
-    private static String[] roundQuestionAnswer() {
+    private static String[] getRoundQuestionAnswer() {
         int number = Utils.getMinMaxRandom(MIN_NUMBER, MAX_NUMBER);
         String[] roundQuestionAnswer = new String[2];
         roundQuestionAnswer[0] = Integer.toString(number);

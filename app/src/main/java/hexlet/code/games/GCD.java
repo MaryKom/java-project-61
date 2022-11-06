@@ -9,7 +9,7 @@ public class GCD {
     public static void runGame() {
         String[][] gameQuestionAnswer = new String[Engine.NUMBER_OF_ROUNDS][2];
         for (int i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
-            gameQuestionAnswer[i] = roundQuestionAnswer();
+            gameQuestionAnswer[i] = getRoundQuestionAnswer();
         }
         Engine.runGame(RULES, gameQuestionAnswer);
     }
@@ -25,7 +25,7 @@ public class GCD {
         return Integer.toString(number1);
     }
 
-    private static String[] roundQuestionAnswer() {
+    private static String[] getRoundQuestionAnswer() {
         int number1 = Utils.getMaxRandom(MAX_NUMBER);
         int number2 = Utils.getMaxRandom(MAX_NUMBER);
         String[] roundQuestionAnswer = new String[2];

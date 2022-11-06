@@ -9,7 +9,7 @@ public class Even {
     public static void runGame() {
         String[][] gameQuestionAnswer = new String[Engine.NUMBER_OF_ROUNDS][2];
         for (int i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
-            gameQuestionAnswer[i] = roundQuestionAnswer();
+            gameQuestionAnswer[i] = getRoundQuestionAnswer();
         }
         Engine.runGame(RULES, gameQuestionAnswer);
     }
@@ -18,7 +18,7 @@ public class Even {
         return number % 2 == 0;
     }
 
-    private static String[] roundQuestionAnswer() {
+    private static String[] getRoundQuestionAnswer() {
         int question = Utils.getMaxRandom(MAX_NUMBER);
         String[] roundQuestionAnswer = new String[2];
         roundQuestionAnswer[0] = Integer.toString(question);
